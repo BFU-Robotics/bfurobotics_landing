@@ -1,0 +1,306 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000;
+    padding: 1em 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li:last-child {
+    margin-right: 0;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: white;
+}
+
+header .btn-join {
+    background-color: white;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.hero {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.hero-content .btn {
+    background-color: white;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+section {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.about p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+.project-list, .publication-list, .sponsor-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project-item, .publication-item, .sponsor-list img {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+    text-align: center;
+}
+
+.project-item img, .publication-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.sponsor-list img {
+    max-width: 200px;
+    height: auto;
+    margin: 10px 20px;
+}
+
+.join {
+    background-color: #222;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.join h2 {
+    margin-bottom: 20px;
+}
+
+.join form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.join input, .join button {
+    flex: 1 1 200px;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #fff;
+}
+
+.join button {
+    background-color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .contacts {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+footer .contacts p, footer iframe {
+    margin: 5px 0;
+}
+
+footer iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+footer .social-icons {
+    margin-top: 10px;
+}
+
+footer .social-icons img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+footer p {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    color: #888;
+}
+
+/* Adjusting the join-us form */
+.join-us form {
+    display: block;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.join-us .form-buttons {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.join-us form input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.join-us form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff7f00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.join-us form button[type="submit"]:hover {
+    background-color: #e06b00;
+}
+
+/* Adjusting the sponsor logos */
+.sponsor-logos img {
+    max-width: 150px;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+/* Styling the footer to be minimal */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: inherit; /* Match with the rest of the site */
+    border-top: 1px solid #ccc;
+}
+
+/* Contacts Section */
+.contacts {
+    text-align: left;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.contacts p {
+    margin: 5px 0;
+}
+
+#map {
+    width: 100%;
+    height: 200px;
+}
+
+/* Adjusting the join-us form */
+.join-us form {
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.join-us .form-buttons {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.join-us form input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.join-us form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff7f00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.join-us form button[type="submit"]:hover {
+    background-color: #e06b00;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFU Robotics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="{{ url_for('static', filename='images/lo2go.svg') }}" alt="BFU Robotics" class="logo">
+
+            <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Проекты</a></li>
+                <li><a href="#">Публикации</a></li>
+                <li><a href="#">Спонсоры</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="{{ url_for('static', filename='images/hero.png') }}" alt="Hero Image">
+        <div class="hero-content">
+            <h1>Лаборатория робототехники Балтийского Федерального Университета</h1>
+            <a href="#" class="btn">Присоединиться</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>О нас</h2>
+        <p>Основанный в 2010 году, Университетский Робототехнический Клуб развивает навыки и знания студентов в робототехнике, предоставляя доступ к современному оборудованию и организуя образовательные мероприятия. Мы участвуем в научных проектах, сотрудничаем с ведущими компаниями, способствуем профессиональному развитию и реализуем проекты для улучшения качества жизни общества. Клуб служит платформой для инноваций и реализации смелых идей.</p>
+    </section>
+
+    <section class="projects">
+        <h2>Проекты</h2>
+        <div class="project-list">
+            <div class="project-item">
+                <img src="{{ url_for('static', filename='images/project.png') }}" alt="Autonomous Vehicle">
+                <h3>Autonomous Vehicle Project</h3>
+                <p>Developing self-driving technology for urban environments</p>
+            </div>
+            <div class="project-item">
+                <img src="{{ url_for('static', filename='images/project.png') }}" alt="Medical Robotics">
+                <h3>Medical Robotics Research</h3>
+                <p>Exploring the use of robots in healthcare, from surgery to patient care</p>
+            </div>
+            <div class="project-item">
+                <img src="{{ url_for('static', filename='images/project.png') }}" alt="Agricultural Drone">
+                <h3>Agricultural Drone System</h3>
+                <p>Creating drones for crop monitoring and precision agriculture</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="publications">
+        <h2>Публикации</h2>
+        <div class="publication-list">
+            <div class="publication-item">
+                <img src="{{ url_for('static', filename='images/publication.png') }}" alt="Robotics Competition">
+                <h3>Members Win First Place at Robotics Competition</h3>
+                <p>Sep 30, 2022</p>
+            </div>
+            <div class="publication-item">
+                <img src="{{ url_for('static', filename='images/publication.png') }}" alt="AI Drone">
+                <h3>Students Develop AI-Powered Drone for Search and Rescue</h3>
+                <p>Sep 25, 2022</p>
+            </div>
+            <div class="publication-item">
+                <img src="{{ url_for('static', filename='images/publication.png') }}" alt="Robotics Guide">
+                <h3>How to Get Started in Robotics: A Beginner's Guide</h3>
+                <p>Sep 20, 2022</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="sponsors">
+        <h2>Спонсоры</h2>
+        <div class="sponsor-list">
+            <img src="{{ url_for('static', filename='images/yandex.svg') }}" alt="SberTech">
+            <img src="{{ url_for('static', filename='images/yandex.svg') }}" alt="Fakel">
+            <img src="{{ url_for('static', filename='images/yandex.svg') }}" alt="Yandex">
+        </div>
+    </section>
+
+    <!-- Join Us Section -->
+<!-- Join Us Section -->
+<section class="join-us">
+    <h2>Присоединиться</h2>
+    <form action="/join" method="POST">
+        <div class="form-buttons">
+            <label>
+                <input type="radio" name="join_option" value="join" required> Хочу собирать роботов
+            </label>
+            <label>
+                <input type="radio" name="join_option" value="sponsor"> Хочу спонсировать
+            </label>
+        </div>
+        <input type="text" name="name" placeholder="Имя" required>
+        <input type="text" name="course" placeholder="Курс" required>
+        <input type="text" name="telegram" placeholder="Телеграм" required>
+        <button type="submit">Отправить</button>
+    </form>
+</section>
+
+
+<!-- Contacts Section -->
+<section class="contacts">
+    <h2>Присоединиться</h2>
+    <p>Email: bfu_robotics@gmail.com</p>
+    <p>Phone: +722813537123</p>
+    <div id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.1608016213845!2d20.52553867814442!3d54.7243863130124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e315e4077dffff%3A0xc3e6a3e96665bd80!2z0JHQsNC70YLQuNC50YHQutC40Lkg0YTQtdC00LXRgNCw0LvRjNC90YvQuSDRg9C90LjQstC10YDRgdC40YLQtdGCINC40LzQtdC90Lgg0JjQvNC80LDQvdGD0LjQu9CwINCa0LDQvdGC0LA!5e0!3m2!1sen!2sus!4v1723341928913!5m2!1sen!2sus"></iframe></div> <!-- Google map element -->
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <p>© 2024 BFU Robotics</p>
+</footer>
+
+</body>
+</html>
