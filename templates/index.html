@@ -1,123 +1,325 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>BFU Robotics</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
     <header>
-        <nav>
-            <img src="{{ url_for('static', filename='images/lo2go.svg') }}" alt="BFU Robotics" class="logo">
+      <nav>
+        <a class="logo-wrapper" href="#">
+          <img
+            src="{{ url_for('static', filename='images/logo.svg') }}"
+            alt="BFU Robotics"
+            class="logo"
+          />
+          <div class="logo-text">BFU Robotics</div>
+        </a>
 
-            <ul>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Проекты</a></li>
-                <li><a href="#">Публикации</a></li>
-                <li><a href="#">Спонсоры</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
-        </nav>
+        <ul>
+          <div class="overlay">
+            <a class="logo-wrapper" href="#">
+              <img
+                src="{{ url_for('static', filename='images/logo.svg') }}"
+                alt="BFU Robotics"
+                class="logo"
+              />
+              <div class="logo-text">BFU Robotics</div>
+            </a>
+            <button class="close-btn">
+              <img
+                src="{{ url_for('static', filename='images/close.svg') }}"
+                alt="close"
+              />
+            </button>
+          </div>
+          <div class="nav-items">
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#projects">Проекты</a></li>
+            <li><a href="#publications">Публикации</a></li>
+            <li><a href="#sponsors">Спонсоры</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+            <li class="btn-wrapper">
+              <a href="#join-us" class="btn-join">Присоединиться</a>
+              <a href="#join-us" class="btn-sponsor">Спонсировать</a>
+            </li>
+          </div>
+        </ul>
+
+        <button class="menu-btn">
+          <img
+            src="{{ url_for('static', filename='images/menu.svg') }}"
+            alt="Menu"
+          />
+        </button>
+      </nav>
     </header>
 
-    <section class="hero">
-        <img src="{{ url_for('static', filename='images/hero.png') }}" alt="Hero Image">
+    <main>
+      <section class="hero">
+        <img
+          src="{{ url_for('static', filename='images/hero.png') }}"
+          alt="Hero Image"
+        />
         <div class="hero-content">
-            <h1>Лаборатория робототехники Балтийского Федерального Университета</h1>
-            <a href="#" class="btn">Присоединиться</a>
+          <h1>
+            Лаборатория робототехники Балтийского Федерального Университета
+          </h1>
+          <a href="#join-us" class="btn-join">Присоединиться</a>
         </div>
-    </section>
+      </section>
 
-    <section class="about">
+      <section class="about" id="about">
         <h2>О нас</h2>
-        <p>Основанный в 2010 году, Университетский Робототехнический Клуб развивает навыки и знания студентов в робототехнике, предоставляя доступ к современному оборудованию и организуя образовательные мероприятия. Мы участвуем в научных проектах, сотрудничаем с ведущими компаниями, способствуем профессиональному развитию и реализуем проекты для улучшения качества жизни общества. Клуб служит платформой для инноваций и реализации смелых идей.</p>
-    </section>
+        <p>
+          Основанный в 2010 году, Университетский Робототехнический Клуб
+          развивает навыки и знания студентов в робототехнике, предоставляя
+          доступ к современному оборудованию и организуя образовательные
+          мероприятия. Мы участвуем в научных проектах, сотрудничаем с ведущими
+          компаниями, способствуем профессиональному развитию и реализуем
+          проекты для улучшения качества жизни общества. Клуб служит платформой
+          для инноваций и реализации смелых идей.
+        </p>
+      </section>
 
-    <section class="projects">
+      <section class="projects" id="projects">
         <h2>Проекты</h2>
         <div class="project-list">
-            <div class="project-item">
-                <img src="{{ url_for('static', filename='images/project.png') }}" alt="Autonomous Vehicle">
-                <h3>Autonomous Vehicle Project</h3>
-                <p>Developing self-driving technology for urban environments</p>
-            </div>
-            <div class="project-item">
-                <img src="{{ url_for('static', filename='images/project.png') }}" alt="Medical Robotics">
-                <h3>Medical Robotics Research</h3>
-                <p>Exploring the use of robots in healthcare, from surgery to patient care</p>
-            </div>
-            <div class="project-item">
-                <img src="{{ url_for('static', filename='images/project.png') }}" alt="Agricultural Drone">
-                <h3>Agricultural Drone System</h3>
-                <p>Creating drones for crop monitoring and precision agriculture</p>
-            </div>
+          <div class="project-item">
+            <img
+              src="{{ url_for('static', filename='images/project.png') }}"
+              alt="Autonomous Vehicle"
+            />
+            <h3>Autonomous Vehicle Project</h3>
+            <p>Developing self-driving technology for urban environments</p>
+          </div>
+          <div class="project-item">
+            <img
+              src="{{ url_for('static', filename='images/project.png') }}"
+              alt="Medical Robotics"
+            />
+            <h3>Medical Robotics Research</h3>
+            <p>
+              Exploring the use of robots in healthcare, from surgery to patient
+              care
+            </p>
+          </div>
+          <div class="project-item">
+            <img
+              src="{{ url_for('static', filename='images/project.png') }}"
+              alt="Agricultural Drone"
+            />
+            <h3>Agricultural Drone System</h3>
+            <p>Creating drones for crop monitoring and precision agriculture</p>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="publications">
+      <section class="publications" id="publications">
         <h2>Публикации</h2>
         <div class="publication-list">
-            <div class="publication-item">
-                <img src="{{ url_for('static', filename='images/publication.png') }}" alt="Robotics Competition">
-                <h3>Members Win First Place at Robotics Competition</h3>
-                <p>Sep 30, 2022</p>
-            </div>
-            <div class="publication-item">
-                <img src="{{ url_for('static', filename='images/publication.png') }}" alt="AI Drone">
-                <h3>Students Develop AI-Powered Drone for Search and Rescue</h3>
-                <p>Sep 25, 2022</p>
-            </div>
-            <div class="publication-item">
-                <img src="{{ url_for('static', filename='images/publication.png') }}" alt="Robotics Guide">
-                <h3>How to Get Started in Robotics: A Beginner's Guide</h3>
-                <p>Sep 20, 2022</p>
-            </div>
+          <div class="publication-item">
+            <img
+              src="{{ url_for('static', filename='images/publication.png') }}"
+              alt="Robotics Competition"
+            />
+            <h3>Members Win First Place at Robotics Competition</h3>
+            <p>Sep 30, 2022</p>
+          </div>
+          <div class="publication-item">
+            <img
+              src="{{ url_for('static', filename='images/publication.png') }}"
+              alt="AI Drone"
+            />
+            <h3>Students Develop AI-Powered Drone for Search and Rescue</h3>
+            <p>Sep 25, 2022</p>
+          </div>
+          <div class="publication-item">
+            <img
+              src="{{ url_for('static', filename='images/publication.png') }}"
+              alt="Robotics Guide"
+            />
+            <h3>How to Get Started in Robotics: A Beginner's Guide</h3>
+            <p>Sep 20, 2022</p>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="sponsors">
+      <section class="sponsors" id="sponsors">
         <h2>Спонсоры</h2>
         <div class="sponsor-list">
-            <img src="{{ url_for('static', filename='images/yandex.svg') }}" alt="SberTech">
-            <img src="{{ url_for('static', filename='images/yandex.svg') }}" alt="Fakel">
-            <img src="{{ url_for('static', filename='images/yandex.svg') }}" alt="Yandex">
+          <img
+            src="{{ url_for('static', filename='images/sber.svg') }}"
+            alt="SberTech"
+          />
+          <img
+            src="{{ url_for('static', filename='images/fakel.svg') }}"
+            alt="Fakel"
+          />
+          <img
+            src="{{ url_for('static', filename='images/yandex.svg') }}"
+            alt="Yandex"
+          />
         </div>
-    </section>
+      </section>
 
-    <!-- Join Us Section -->
-<!-- Join Us Section -->
-<section class="join-us">
-    <h2>Присоединиться</h2>
-    <form action="/join" method="POST">
-        <div class="form-buttons">
-            <label>
-                <input type="radio" name="join_option" value="join" required> Хочу собирать роботов
-            </label>
-            <label>
-                <input type="radio" name="join_option" value="sponsor"> Хочу спонсировать
-            </label>
+      <!-- Join Us Section -->
+      <section class="join-us" id="join-us">
+        <h2>Присоединиться</h2>
+        <h3>
+          Стать членом нашего клуба можно в любой момент! Мы приветствуем
+          студентов всех факультетов и курсов, заинтересованных в робототехнике
+          и смежных областях.
+        </h3>
+        <form action="/join" method="POST">
+          <div class="form-buttons">
+            <input
+              type="radio"
+              name="join_option"
+              value="join"
+              id="radio1"
+              checked
+              required
+            />
+            <label for="radio1">Хочу собирать роботов</label>
+            <input
+              type="radio"
+              name="join_option"
+              value="sponsor"
+              id="radio2"
+            />
+            <label for="radio2">Хочу спонсировать</label>
+          </div>
+          <div class="main-form">
+            <input type="text" name="name" placeholder="Имя" required />
+            <input type="text" name="course" placeholder="Курс" required />
+            <input
+              type="text"
+              name="telegram"
+              placeholder="Телеграм"
+              required
+            />
+            <button type="submit">Отправить</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Contacts Section -->
+      <section class="contacts" id="contacts">
+        <h2>Контакты</h2>
+        <div class="contacts-wrapper">
+          <div class="contacts-item">
+            <p>bfu_robotics@gmail.com</p>
+            <p>+722813537123</p>
+            <ul class="socials">
+              <li>
+                <a href="#"
+                  ><img
+                    src="{{ url_for('static', filename='images/habr.svg') }}"
+                    alt="Habr"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="{{ url_for('static', filename='images/github.svg') }}"
+                    alt="Github"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="{{ url_for('static', filename='images/vk.svg') }}"
+                    alt="VK"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="{{ url_for('static', filename='images/telegram.svg') }}"
+                    alt="Telegram"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="contacts-item">
+            <iframe
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.1608016213845!2d20.52553867814442!3d54.7243863130124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e315e4077dffff%3A0xc3e6a3e96665bd80!2z0JHQsNC70YLQuNC50YHQutC40Lkg0YTQtdC00LXRgNCw0LvRjNC90YvQuSDRg9C90LjQstC10YDRgdC40YLQtdGCINC40LzQtdC90Lgg0JjQvNC80LDQvdGD0LjQu9CwINCa0LDQvdGC0LA!5e0!3m2!1sen!2sus!4v1723341928913!5m2!1sen!2sus"
+            ></iframe>
+          </div>
         </div>
-        <input type="text" name="name" placeholder="Имя" required>
-        <input type="text" name="course" placeholder="Курс" required>
-        <input type="text" name="telegram" placeholder="Телеграм" required>
-        <button type="submit">Отправить</button>
-    </form>
-</section>
+      </section>
+    </main>
 
+    <!-- Footer Section -->
+    <footer>
+      <ul class="footer-nav">
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#projects">Проекты</a></li>
+        <li><a href="#publications">Публикации</a></li>
+        <li><a href="#sponsors">Спонсоры</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+      <ul class="socials">
+        <li>
+          <a href="#"
+            ><img
+              src="{{ url_for('static', filename='images/telegram.svg') }}"
+              alt="Telegram"
+            />
+          </a>
+        </li>
 
-<!-- Contacts Section -->
-<section class="contacts">
-    <h2>Присоединиться</h2>
-    <p>Email: bfu_robotics@gmail.com</p>
-    <p>Phone: +722813537123</p>
-    <div id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.1608016213845!2d20.52553867814442!3d54.7243863130124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e315e4077dffff%3A0xc3e6a3e96665bd80!2z0JHQsNC70YLQuNC50YHQutC40Lkg0YTQtdC00LXRgNCw0LvRjNC90YvQuSDRg9C90LjQstC10YDRgdC40YLQtdGCINC40LzQtdC90Lgg0JjQvNC80LDQvdGD0LjQu9CwINCa0LDQvdGC0LA!5e0!3m2!1sen!2sus!4v1723341928913!5m2!1sen!2sus"></iframe></div> <!-- Google map element -->
-</section>
+        <li>
+          <a href="#"
+            ><img
+              src="{{ url_for('static', filename='images/vk.svg') }}"
+              alt="VK"
+            />
+          </a>
+        </li>
 
-<!-- Footer Section -->
-<footer>
-    <p>© 2024 BFU Robotics</p>
-</footer>
+        <li>
+          <a href="#"
+            ><img
+              src="{{ url_for('static', filename='images/github.svg') }}"
+              alt="Github"
+            />
+          </a>
+        </li>
 
-</body>
+        <li>
+          <a href="#"
+            ><img
+              src="{{ url_for('static', filename='images/habr.svg') }}"
+              alt="Habr"
+            />
+          </a>
+        </li>
+      </ul>
+      <p>© 2024 BFU Robotics</p>
+    </footer>
+  </body>
+  <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
 </html>
